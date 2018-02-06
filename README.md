@@ -32,9 +32,9 @@ acl.isAllowed('member', 'blog', 'get');
 
 ## Concepts
 
-- `roles` are the types of user trying to access `resources`
-- `allows` describes the oprations user will need to do
-- `matrix` describes the `allows` relation between `roles` and `resources`;
+- **`roles`** are the types of user trying to access **`resources`**
+- **`allows`** describes the oprations user will need to do
+- **`matrix`** describes the `allows` relation between `roles` and `resources`;
 - third dimension of the matrix is an array of `0` and `1`s, the length of array should equal to `allows`'s. This array describes the permissions.
 
 For example: in the above sample code, `matrix[0][2]` (`[1, 0, 0, 0]`) means the `guest` role is able to `'get'` the `'blog'` resource, but not others.
