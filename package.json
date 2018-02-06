@@ -1,0 +1,27 @@
+{
+  "name": "acl-matrix",
+  "version": "1.0.1",
+  "description": "Use a matrix to describe your application's access control list (ACL)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -u qunit "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timqian/acl-matrix.git"
+  },
+  "keywords": [
+    "acl",
+    "matrix"
+  ],
+  "author": "timqian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timqian/acl-matrix/issues"
+  },
+  "homepage": "https://github.com/timqian/acl-matrix#readme",
+  "devDependencies": {
+    "mocha": "^5.0.0",
+    "should": "^13.2.1"
+  }
+}
