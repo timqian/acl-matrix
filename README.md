@@ -2,10 +2,11 @@
 
 ## Usage
 
+1. Install
 ```bash
 npm install acl-matrix
 ```
-
+2. Require it
 ```js
 const AclMatrix = require('acl-matrix');
 
@@ -34,9 +35,9 @@ acl.isAllowed('member', 'blog', 'get');
 - `roles` are the type of users trying to access `resources`
 - `allows` describes the oprations user will need to do
 - `matrix` is a table describing this relation
-- third dimension of the matrix is an array of `0` and `1`s, the length of array should equal to `allows`. This array describes the permission.
+- third dimension of the matrix is an array of `0` and `1`s, the length of array should equal to `allows`'s. This array describes the permissions.
 
-For example: in the above sample code `matrix[0][2]` (`[1, 0, 0, 0]`) means the `guest` role is able to `'get'` the `'blog'` resource, but not others.
+For example: in the above sample code, `matrix[0][2]` (`[1, 0, 0, 0]`) means the `guest` role is able to `'get'` the `'blog'` resource, but not others.
 
 ### Parameter limits
 - Row number of `matrix` should eauql to `resources` length;
@@ -46,12 +47,12 @@ For example: in the above sample code `matrix[0][2]` (`[1, 0, 0, 0]`) means the 
 ## Pros and Cons
 
 ### Pros
-[node_acl](https://www.npmjs.com/package/acl) is good, but will need a database to store the acls and relatively hard to mantain and update.
+[node_acl](https://www.npmjs.com/package/acl) is good, but it acquires database to store the acls. And it is relatively hard to mantain and update acl using `node_acl`.
 
-acl-matrix has the benefits:
+Benefits of using `acl-matrix`:
 1. Three dimensional matrix is the simplest way to store acl;
 1. Simple to config and simple for future change;
-1. The acl matrix can be easily shared between frontend and backend;
+1. No dependency, acl matrix can be easily shared between frontend and backend;
 1. Performance: no database needed, checking permissions is justing reading elemet in array
 
 ### Cons
@@ -61,4 +62,4 @@ acl-matrix has the benefits:
 
 
 ## TODOs
-add more method for the class maybe?
+Add more method for the class maybe?

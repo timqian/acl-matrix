@@ -1,4 +1,10 @@
 module.exports = class AclMatrix {
+    /**
+     * @param {Array} roles
+     * @param {Array} resources
+     * @param {Array} allows
+     * @param {Array} matrix
+     */
     constructor(roles, resources, allows, matrix) {
         if (!(matrix.length === resources.length)) throw new Error('matrix.length should equal to resources.lenth');
         matrix.forEach(row => {
@@ -13,6 +19,11 @@ module.exports = class AclMatrix {
         this.matrix = matrix;
     }
 
+    /**
+     * @param {String} role
+     * @param {String} resource
+     * @param {String} allow
+     */
     isAllowed(role, resource, allow) {
         if (!this.roles.includes(role)) throw new Error('Provided role is not found in the roles array');
         if (!this.resources.includes(resource)) throw new Error('Provided resource is not found in the resources array');
