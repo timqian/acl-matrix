@@ -1,6 +1,6 @@
 {
   "name": "acl-matrix",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Use a matrix to describe your application's access control list (ACL)",
   "main": "index.js",
   "scripts": {
